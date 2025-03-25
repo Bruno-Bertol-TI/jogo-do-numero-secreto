@@ -33,3 +33,10 @@ function limparCampo() {
     chute = document.querySelector('input');
     chute.value = '';
 }
+
+function reiniciarJogo() {
+    numeroTentativas = 1;
+    numeroSecreto = gerarNumeroAleatorio();
+    limparCampo();
+    document.getElementById('reiniciar').setAttribute('disabled', true); 
+}
