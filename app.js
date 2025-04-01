@@ -24,6 +24,7 @@ function exibirMensagemInicial() {
 exibirMensagemInicial();
 
 function verificarChute() {
+    console.log('olá');
     let chute = document.querySelector('input').value;
     
     if (chute == numeroSecreto) {
@@ -41,13 +42,13 @@ function verificarChute() {
 
 function gerarNumeroAleatorio() {
     let numeroEscolhido = parseInt(Math.random() * 10 + 1);
-    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length();
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
     if (quantidadeDeElementosNaLista == numeroLimite) {
         listaDeNumerosSorteados = [];
     }
 
-    if (listaDeNumerosSorteados.include(numeroEscolhido)) {
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
         return gerarNumeroAleatorio();
     } else {
         listaDeNumerosSorteados.push(numeroEscolhido);
