@@ -24,7 +24,6 @@ function exibirMensagemInicial() {
 exibirMensagemInicial();
 
 function verificarChute() {
-    console.log('olá');
     let chute = document.querySelector('input').value;
     
     if (chute == numeroSecreto) {
